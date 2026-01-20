@@ -21,10 +21,9 @@ const ChatApp = () => {
     // 1. Configurar la conexión
     // Reemplaza con la URL de tu App Service en Azure (ej: https://tu-app.azurewebsites.net/chatHub)
     const newConnection = new signalR.HubConnectionBuilder()
-      .withUrl("https://chatsignalraor-cvhuead0b3c2bsfy.italynorth-01.azurewebsites.net/chatHub", {
-        transport: signalR.HttpTransportType.WebSockets,
-        skipNegotiation: true
-      })
+      .withUrl("https://chatsignalraor-cvhuead0b3c2bsfy.italynorth-01.azurewebsites.net/chatHub"
+        , {transport: signalR.HttpTransportType.WebSockets,skipNegotiation: true}
+      )
       .withAutomaticReconnect()
       .build();
 
